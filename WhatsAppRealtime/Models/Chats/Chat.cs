@@ -8,9 +8,9 @@ public class Chat(string user1, string user2)
     
     #region Propiedades Chat
 
-    public string Id { get; set; }// = GetChatId(user1, user2); // olivertazuecobaraza-otrousuario
+    public string Id { get; set; } // key
     
-    public readonly string User1 = user1; // olivertazuecobaraza
+    public readonly string User1 = user1; // oliver.tazueco.baraza@...
     
     public readonly string User2 = user2; //usuaro2
 

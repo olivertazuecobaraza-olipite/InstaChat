@@ -95,10 +95,5 @@ public class FireBaseRealTime(FireBaseAuth fba)
 
     #endregion
     
-    // obtener email logueado
-    public string ObtenerEmail()
-    {
-        return fba.Instance.User == null ? "Usuario logueado null" : fba.Instance.User.Info.Email;
-    }
     #endregion
 }

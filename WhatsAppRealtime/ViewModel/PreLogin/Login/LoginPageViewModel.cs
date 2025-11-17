@@ -36,7 +36,7 @@ public partial class LoginPageViewModel(FireBaseAuth fba) : ObservableObject
     [RelayCommand]
     private async Task IniciarSesion()
     {
-        if (Utiles.TestPassword(Email, Password, ConfirmPassword) && _fba.IniciarSesion(Email, Password))
+        if (Utiles.TestPassword(Email, Password, ConfirmPassword) && await _fba.IniciarSesion(Email, Password))
         {
             GoToShell();
         }

@@ -7,7 +7,9 @@ using WhatsAppRealtime.Pages.PostLogin.Main.Menu;
 using WhatsAppRealtime.Pages.PostLogin.Profile;
 using WhatsAppRealtime.Pages.PreLogin.Login;
 using WhatsAppRealtime.Pages.PreLogin.Register;
+using WhatsAppRealtime.PopUps;
 using WhatsAppRealtime.Services.Firebase;
+using WhatsAppRealtime.ViewModel.PopUps.AddChat;
 using WhatsAppRealtime.ViewModel.PostLogin.Main.Chats;
 using WhatsAppRealtime.ViewModel.PostLogin.Main.Menu;
 using WhatsAppRealtime.ViewModel.PostLogin.Profile;
@@ -35,7 +37,7 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-    
+        
         builder.Services.StartServices(); // servicios
         builder.Services.StartPageViewModel(); // Pages y vm
         

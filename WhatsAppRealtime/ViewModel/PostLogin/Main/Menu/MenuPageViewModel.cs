@@ -1,4 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using WhatsAppRealtime.Models.Chats;
@@ -7,6 +10,8 @@ using WhatsAppRealtime.Services.Firebase;
 using Firebase.Database.Streaming;
 using WhatsAppRealtime.Models.Static;
 using WhatsAppRealtime.Pages.PostLogin.Main.Chats;
+using WhatsAppRealtime.PopUps;
+using WhatsAppRealtime.ViewModel.PopUps.AddChat;
 
 namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Menu;
 
@@ -15,7 +20,8 @@ public partial class MenuPageViewModel : ObservableObject
     #region Servicios
 
     private readonly FireBaseRealTime _fbr;
-    
+    private readonly FireBaseAuth _fba;
+    //private readonly IPopupService _popupService;
     #endregion
     
     #region Obserevables
@@ -23,15 +29,20 @@ public partial class MenuPageViewModel : ObservableObject
     [ObservableProperty] private ObservableCollection<Chat> _chats = new();
     [ObservableProperty] private string _email;
 
+    [ObservableProperty] private string _emailReceptor = string.Empty;
+    
     #endregion
     
     #region Constructor
     
-    public MenuPageViewModel(FireBaseRealTime fbr)
+    public MenuPageViewModel(FireBaseAuth fba, FireBaseRealTime fbr)
     {
         _fbr = fbr;
-        Email = fbr.ObtenerEmail();
+        _fba = fba;
+        //this._popupService = popupService;
+        //Email = _fba.ObtenerEmail();
         StartListenChats();
+        
     }
     
     #endregion
@@ -41,7 +52,20 @@ public partial class MenuPageViewModel : ObservableObject
     [RelayCommand]
     private async Task AddChat()
     {
-        var chat = new Chat("oliver", "User");
+        var popup = new AddChatPopUp();
+        
+        var result = await Shell.Current.ShowPopupAsync(popup);
+
+        if (result is string text)
+        {
+            EmailReceptor = text; 
+        }
+        else
+        {
+            return;
+        }
+        
+        var chat = new Chat(_fba.ObtenerEmail(), EmailReceptor);
         if (await _fbr.CrearChat(chat))
         {
             await Utiles.AlertasBuenaShell("Chat credo correctamente");
@@ -92,6 +116,11 @@ public partial class MenuPageViewModel : ObservableObject
             if (chat.Object == null) return;
             chat.Object.Id = chat.Key;
 
+            if (!chat.Object.User1.Equals(_fba.ObtenerEmail()) && !chat.Object.User2.Equals(_fba.ObtenerEmail()) )
+            {
+                return;
+            }
+            
             var existeChat = Chats.FirstOrDefault(c => c.Id == chat.Key);
             
             if (chat.EventType == FirebaseEventType.InsertOrUpdate)

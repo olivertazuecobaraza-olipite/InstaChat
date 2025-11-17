@@ -7,7 +7,7 @@ public class FireBaseAuth
 {
     #region Instace
     
-    public readonly FirebaseAuthClient Instance = new FirebaseAuthClient(new FirebaseAuthConfig
+    public FirebaseAuthClient Instance = new FirebaseAuthClient(new FirebaseAuthConfig
         {
             ApiKey = "AIzaSyCieV0jgiuAdEgGg757M5RrDX5BCaH6Npw",
             AuthDomain = "whatsappmauioliver.firebaseapp.com",
@@ -28,12 +28,12 @@ public class FireBaseAuth
     #region Metodos
 
     // iniciar sesion con Email y password
-    public bool IniciarSesion(string email, string password)
+    public async Task<bool> IniciarSesion(string email, string password)
     {
         var s = false;
         try
         {
-            Instance.SignInWithEmailAndPasswordAsync(email, password);
+            await Instance.SignInWithEmailAndPasswordAsync(email, password);
             s = true;
         }
         catch (Exception e)
@@ -75,7 +75,11 @@ public class FireBaseAuth
         }
         return s;
     }
-    
+
+    public string ObtenerEmail()
+    {
+        return Instance.User == null ? "Usuario logueado null" : Instance.User.Info.Email;
+    }
     #endregion
     
 }

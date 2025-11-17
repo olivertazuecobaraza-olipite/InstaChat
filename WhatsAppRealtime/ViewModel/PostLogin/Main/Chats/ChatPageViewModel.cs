@@ -11,7 +11,7 @@ using WhatsAppRealtime.Services.Firebase;
 namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Chats;
 
 
-public partial class ChatPageViewModel(FireBaseRealTime fbr) : ObservableObject, IQueryAttributable
+public partial class ChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba) : ObservableObject, IQueryAttributable
 {
     
     #region Observables
@@ -27,10 +27,11 @@ public partial class ChatPageViewModel(FireBaseRealTime fbr) : ObservableObject,
     [RelayCommand]
     private async Task Enviar()
     {
-        var nuvoMensaje = new Message("emailSender", "emailReciver", TextoMensaje);
-        nuvoMensaje.IdChat = ChatActual.Id;
+        var nuvoMensaje = new Message(fba.ObtenerEmail(), EmailReciver(fba.ObtenerEmail()), TextoMensaje)
+            {
+                IdChat = ChatActual!.Id
+            };
         
-        //_fbr.Instance.Child("message").PostAsync(nuvoMensaje);  
         if (TextoMensaje.Equals(string.Empty))
         {   
             await Utiles.AlertasMalasShell("No hay texto");
@@ -53,6 +54,19 @@ public partial class ChatPageViewModel(FireBaseRealTime fbr) : ObservableObject,
     
     #region Metodos
     // metodos
+    private string EmailReciver(string emailEmisor)
+    {
+        if (ChatActual == null) return string.Empty;
+        
+        if (emailEmisor.Equals(ChatActual.User1))
+        {
+            return ChatActual.User2;
+        }
+        else
+        {
+            return ChatActual.User1;
+        }
+    }
     #endregion
     
     #region parametro
@@ -101,5 +115,6 @@ public partial class ChatPageViewModel(FireBaseRealTime fbr) : ObservableObject,
     }
     
     #endregion
+    
     
 }

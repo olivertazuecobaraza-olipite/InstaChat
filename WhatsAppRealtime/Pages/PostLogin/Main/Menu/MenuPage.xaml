@@ -9,6 +9,11 @@
              x:DataType="vm:MenuPageViewModel"
              x:Name="ChatMenuPage">
     
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png"
+                     Command="{Binding AddChatCommand}"/>
+    </ContentPage.ToolbarItems>
+    
     <VerticalStackLayout Margin="10">
         <Label Text="{Binding Email}"/>
         <CollectionView ItemsSource="{Binding Chats}">
