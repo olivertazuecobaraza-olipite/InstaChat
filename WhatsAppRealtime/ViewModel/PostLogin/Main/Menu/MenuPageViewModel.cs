@@ -10,8 +10,7 @@ using WhatsAppRealtime.Services.Firebase;
 using Firebase.Database.Streaming;
 using WhatsAppRealtime.Models.Static;
 using WhatsAppRealtime.Pages.PostLogin.Main.Chats;
-using WhatsAppRealtime.PopUps;
-using WhatsAppRealtime.ViewModel.PopUps.AddChat;
+using WhatsAppRealtime.Pages.PostLogin.Main.Menu;
 
 namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Menu;
 
@@ -27,9 +26,6 @@ public partial class MenuPageViewModel : ObservableObject
     #region Obserevables
 
     [ObservableProperty] private ObservableCollection<Chat> _chats = new();
-    [ObservableProperty] private string _email;
-
-    [ObservableProperty] private string _emailReceptor = string.Empty;
     
     #endregion
     
@@ -39,8 +35,6 @@ public partial class MenuPageViewModel : ObservableObject
     {
         _fbr = fbr;
         _fba = fba;
-        //this._popupService = popupService;
-        //Email = _fba.ObtenerEmail();
         StartListenChats();
         
     }
@@ -52,28 +46,10 @@ public partial class MenuPageViewModel : ObservableObject
     [RelayCommand]
     private async Task AddChat()
     {
-        var popup = new AddChatPopUp();
-        
-        var result = await Shell.Current.ShowPopupAsync(popup);
 
-        if (result is string text)
-        {
-            EmailReceptor = text; 
-        }
-        else
-        {
-            return;
-        }
-        
-        var chat = new Chat(_fba.ObtenerEmail(), EmailReceptor);
-        if (await _fbr.CrearChat(chat))
-        {
-            await Utiles.AlertasBuenaShell("Chat credo correctamente");
-        }
-        else
-        {
-            await Utiles.AlertasMalasShell("Error al crear el Chat");
-        }
+        var createChat = Shell.Current.Handler?.MauiContext?.Services.GetService<AddChatPage>();
+        await Shell.Current.Navigation.PushAsync(createChat);
+
     }
     
     [RelayCommand]
@@ -116,22 +92,22 @@ public partial class MenuPageViewModel : ObservableObject
             if (chat.Object == null) return;
             chat.Object.Id = chat.Key;
 
-            if (!chat.Object.User1.Equals(_fba.ObtenerEmail()) && !chat.Object.User2.Equals(_fba.ObtenerEmail()) )
+            if (!chat.Object.User1.Equals(_fba.ObtenerEmail()) && !chat.Object.User2.Equals(_fba.ObtenerEmail()))
             {
                 return;
             }
             
+            chat.Object.UsuarioLogueado = _fba.ObtenerEmail();
             var existeChat = Chats.FirstOrDefault(c => c.Id == chat.Key);
             
             if (chat.EventType == FirebaseEventType.InsertOrUpdate)
             {
                 if (existeChat == null) // insertar
                 {
-                    //if (emailUserActual!= null &&chat.Object.Id.Contains(Utiles.SeparaUser(emailUserActual))){ Chats.Add(chat.Object); }
                     Chats.Add(chat.Object);
                 }
             }
-            else if (chat.EventType ==  FirebaseEventType.Delete)
+            else if (chat.EventType == FirebaseEventType.Delete)
             {
                 if (existeChat != null)
                 {

@@ -5,13 +5,12 @@ using WhatsAppRealtime.Models.Messages;
 
 namespace WhatsAppRealtime.Services.Firebase;
 
-public class FireBaseRealTime(FireBaseAuth fba)
+public class FireBaseRealTime()
 {
     #region Instancia
 
     public readonly FirebaseClient Instance = new("https://whatsappmauioliver-default-rtdb.europe-west1.firebasedatabase.app/");
-    
-    
+
     #endregion
     
     #region metodos

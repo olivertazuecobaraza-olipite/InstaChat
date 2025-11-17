@@ -23,10 +23,14 @@ public partial class ProfilePageViewModel(FireBaseAuth fba) : ObservableObject
        
         if ( _fba.CerrarSesion())
         {
+            await Utiles.AlertasMalasShell("No se ha podido cerrar sesion");
+
+            /*
             var loginPage = new LoginPage(new LoginPageViewModel(new FireBaseAuth()));
             var nav = new NavigationPage(loginPage);
         
             Application.Current.Windows[0].Page = nav;
+            */
         }
         else
         {

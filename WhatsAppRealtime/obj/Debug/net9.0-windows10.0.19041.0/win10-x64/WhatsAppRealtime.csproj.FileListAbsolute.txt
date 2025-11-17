@@ -525,3 +525,6 @@ C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\bin\Debug\net9.0-wind
 C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png
 C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\send.scale-100.png
 C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\send.scale-100.png
+C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\add.scale-100.png
+C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.scale-100.png
+C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\WhatsAppRealtime.sourcelink.json

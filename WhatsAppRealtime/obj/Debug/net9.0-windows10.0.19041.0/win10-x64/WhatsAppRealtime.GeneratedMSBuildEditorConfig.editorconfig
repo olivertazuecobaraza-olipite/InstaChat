@@ -45,6 +45,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Pages.Pos
 build_metadata.AdditionalFiles.TargetPath = Pages\PostLogin\Main\Chats\ChatPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PostLogin\Main\Chats\ChatPage.xaml
 
+[C:/Users/tazue/Documents/WhatsAppRealtime/WhatsAppRealtime/Pages/PostLogin/Main/Menu/AddChatPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Pages.PostLogin.Main.Menu.AddChatPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PostLogin\Main\Menu\AddChatPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PostLogin\Main\Menu\AddChatPage.xaml
+
 [C:/Users/tazue/Documents/WhatsAppRealtime/WhatsAppRealtime/Pages/PostLogin/Main/Menu/MenuPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Pages.PostLogin.Main.Menu.MenuPage.xaml

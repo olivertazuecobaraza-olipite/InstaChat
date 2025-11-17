@@ -13,9 +13,8 @@
         <ToolbarItem IconImageSource="add.png"
                      Command="{Binding AddChatCommand}"/>
     </ContentPage.ToolbarItems>
-    
+
     <VerticalStackLayout Margin="10">
-        <Label Text="{Binding Email}"/>
         <CollectionView ItemsSource="{Binding Chats}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="chatModel:Chat">
@@ -27,20 +26,19 @@
                                            BackgroundColor="#ff1800"
                                            Command="{Binding Source={x:Reference ChatMenuPage}, Path=BindingContext.DeleteChatCommand}"
                                            CommandParameter="{Binding .}"/>
-                                
+
                             </SwipeItems>
                         </SwipeView.RightItems>
-                        <chatView:ChatView NombreChat="{Binding Id}">
+                        <chatView:ChatView NombreChat="{Binding NombreVisible}">
                             <chatView:ChatView.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Source={x:Reference ChatMenuPage}, Path=BindingContext.IrChatCommand}"
                                                       CommandParameter="{Binding .}"/>
                             </chatView:ChatView.GestureRecognizers>
                         </chatView:ChatView>
                     </SwipeView>
-                    
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="Add" Command="{Binding AddChatCommand}"/> 
     </VerticalStackLayout>
 </ContentPage>

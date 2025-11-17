@@ -20,12 +20,8 @@
                        TextColor="Black"/>
                 <Label Text="{Binding LastMesage}" 
                        TextColor="Gray" />
-                
+
             </StackLayout>
-            
-            <Label Text="{Binding DateLastMessage}" 
-                   VerticalOptions="Center" 
-                   FontSize="12" />
         </StackLayout>
     </Border>
 </ContentView>

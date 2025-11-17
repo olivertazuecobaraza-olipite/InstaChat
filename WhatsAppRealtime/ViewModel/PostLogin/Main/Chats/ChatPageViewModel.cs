@@ -11,23 +11,42 @@ using WhatsAppRealtime.Services.Firebase;
 namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Chats;
 
 
-public partial class ChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba) : ObservableObject, IQueryAttributable
+public partial class ChatPageViewModel : ObservableObject, IQueryAttributable
 {
     
     #region Observables
 
     [ObservableProperty] private Chat? _chatActual;
+
     [ObservableProperty] private ObservableCollection<Message> _mensajes = new();
+    
     [ObservableProperty] private string _textoMensaje = string.Empty;
 
     #endregion
-    
+
+    #region Servicios
+
+    private readonly FireBaseAuth _fba;
+    private readonly FireBaseRealTime _fbr;
+
+    #endregion
+
+    #region Constructor
+
+    public ChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba)
+    {
+        _fba = fba;
+        _fbr = fbr;
+    }
+
+    #endregion
+
     #region Commands
     // enviar
     [RelayCommand]
     private async Task Enviar()
     {
-        var nuvoMensaje = new Message(fba.ObtenerEmail(), EmailReciver(fba.ObtenerEmail()), TextoMensaje)
+        var nuvoMensaje = new Message(_fba.ObtenerEmail(), EmailReciver(_fba.ObtenerEmail()), TextoMensaje)
             {
                 IdChat = ChatActual!.Id
             };
@@ -39,7 +58,7 @@ public partial class ChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba) :
         }
         else
         {
-            if (await fbr.AddMessage(nuvoMensaje))
+            if (await _fbr.AddMessage(nuvoMensaje))
             {
                 Utiles.CrearToast("Enviado");
                 TextoMensaje = string.Empty;
@@ -50,6 +69,7 @@ public partial class ChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba) :
             }
         }
     }
+
     #endregion
     
     #region Metodos
@@ -87,27 +107,24 @@ public partial class ChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba) :
     // start Chats
     private void ListenMessage()
     {
-        fbr.Instance.Child("message")
+        _fbr.Instance.Child("message")
             .AsObservable<Message>()
             .Subscribe((message) =>
         {
             if (message.Object == null) return;
             
             message.Object.Id = message.Key;
+            message.Object.IsMe = _fba.ObtenerEmail().Equals(message.Object.EmailSender); // poner isme
 
-            if (message.Object.IdChat != ChatActual.Id) return;
+            if (message.Object.IdChat != ChatActual?.Id) return;
             
             var existeMessage = Mensajes.FirstOrDefault(c => c.Id == message.Key);
             
             if (message.EventType == FirebaseEventType.InsertOrUpdate)
             {
                 if (existeMessage == null) // insertar
-                {
+                { 
                     Mensajes.Add(message.Object);
-                }
-                else
-                {
-                    // Update chat hacer
                 }
             }
             

@@ -7,9 +7,8 @@ using WhatsAppRealtime.Pages.PostLogin.Main.Menu;
 using WhatsAppRealtime.Pages.PostLogin.Profile;
 using WhatsAppRealtime.Pages.PreLogin.Login;
 using WhatsAppRealtime.Pages.PreLogin.Register;
-using WhatsAppRealtime.PopUps;
 using WhatsAppRealtime.Services.Firebase;
-using WhatsAppRealtime.ViewModel.PopUps.AddChat;
+
 using WhatsAppRealtime.ViewModel.PostLogin.Main.Chats;
 using WhatsAppRealtime.ViewModel.PostLogin.Main.Menu;
 using WhatsAppRealtime.ViewModel.PostLogin.Profile;
@@ -65,6 +64,9 @@ public static class MauiProgram
 
         service.AddTransient<ProfilePageViewModel>();
         service.AddTransient<ProfilePage>();
+
+        service.AddTransient<AddChatPageViewModel>();
+        service.AddTransient<AddChatPage>();
     }
     
     // Services

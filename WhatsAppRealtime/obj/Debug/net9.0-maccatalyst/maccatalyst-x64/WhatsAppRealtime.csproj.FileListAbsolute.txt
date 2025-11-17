@@ -307,3 +307,5 @@ C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-macc
 C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Mvvm.dll
 C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\delete.png
 C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\send.png
+C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\add.png
+C:\Users\tazue\Documents\WhatsAppRealtime\WhatsAppRealtime\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\WhatsAppRealtime.sourcelink.json

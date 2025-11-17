@@ -12,9 +12,45 @@
                         ItemsSource="{Binding Mensajes}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Message">
-                    <Border BackgroundColor="Violet">
-                        <Label Text="{Binding MensageStr}"/>
-                    </Border>
+                    <VerticalStackLayout Margin="4,2">
+                        <Grid ColumnDefinitions="*, *">
+                            <Border Stroke="Transparent"
+                                    StrokeShape="10"
+                                    Padding="10"
+                                    BackgroundColor="#3a0ca3"
+                                    Grid.Column="1"
+                                    >
+                                <Border.Shadow>
+                                    <Shadow Opacity="0.2"
+                                            Brush="#000000"
+                                            Radius="3"/>
+                                </Border.Shadow>
+
+                                <Label Text="{Binding MensageStr}"
+                                       FontSize="13"
+                                       FontAttributes="Bold"
+                                       TextColor="#ffffff"
+                                       HorizontalOptions="End">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label"
+                                                     Binding="{Binding IsMe}"
+                                                     Value="False">
+                                            <Setter Property="HorizontalOptions" Value="Start"/>
+                                            <Setter Property="TextColor" Value="#000000"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Border.Triggers>
+                                    <DataTrigger TargetType="Border"
+                                                 Binding="{Binding IsMe}"
+                                                 Value="False">
+                                        <Setter Property="Grid.Column" Value="0"/>
+                                        <Setter Property="BackgroundColor" Value="#ffffff"/>
+                                    </DataTrigger>
+                                </Border.Triggers>
+                            </Border>
+                        </Grid>
+                    </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
