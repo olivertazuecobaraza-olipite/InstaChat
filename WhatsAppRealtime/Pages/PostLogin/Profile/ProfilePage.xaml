@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WhatsAppRealtime.ViewModel.PostLogin.Profile"
+             x:Class="WhatsAppRealtime.Pages.PostLogin.Profile.ProfilePage"
+             x:DataType="vm:ProfilePageViewModel"
+             >
+    <StackLayout Margin="15">
+        <Button Text="Cerrar Sesion" 
+                Command="{Binding CerrarSesionCommand}"
+                BackgroundColor="Red"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="20"/>
+    </StackLayout>
+</ContentPage>

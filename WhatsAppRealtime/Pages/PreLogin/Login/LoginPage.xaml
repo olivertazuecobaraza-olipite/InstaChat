@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WhatsAppRealtime.Pages.PreLogin.Login.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:vm="clr-namespace:WhatsAppRealtime.ViewModel.PreLogin.Login"
+             x:DataType="vm:LoginPageViewModel"
+             BackgroundColor="White">
+    <Grid RowDefinitions="Auto, *">
+        <BoxView Grid.Row="0"
+                 BackgroundColor="#4B0082" HeightRequest="300"
+                 VerticalOptions="Start" 
+                 CornerRadius="0,0,35,35"/>
+
+        <VerticalStackLayout Grid.Row="0" Grid.RowSpan="2"
+                             Margin="0, 80, 0, 0"
+                             VerticalOptions="Start"
+                             HorizontalOptions="Fill">
+            
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="5" Margin="0, 0, 0, 30">
+                <StackLayout HorizontalOptions="Center">
+                    <Image Source="logowhite.png" HeightRequest="80" WidthRequest="80" Aspect="AspectFit" />
+                </StackLayout>
+                <Label Text="INSTA CHAT"
+                       TextColor="White"
+                       FontSize="24"
+                       HorizontalOptions="Center"
+                       FontFamily="RobotoMonoVariableFont"/>
+            </VerticalStackLayout>
+
+            <Border BackgroundColor="#edf2f4"
+                    StrokeShape="RoundRectangle 20"
+                    StrokeThickness="0"
+                    Padding="30"
+                    Margin="30, 0, 30, 0"
+                    VerticalOptions="Start">
+                
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="INICIAR SESION"
+                           HorizontalOptions="Center"
+                           FontSize="20"
+                           FontFamily="RobotoMonoVariableFont"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+
+                    <Entry Placeholder="Email"
+                           PlaceholderColor="Gray"
+                           FontFamily="RobotoMonoVariableFont"
+                           Keyboard="Email" 
+                           Text="{Binding Email}"/>
+
+                    <Entry Placeholder="Password"
+                           PlaceholderColor="Gray"
+                           FontFamily="RobotoMonoVariableFont"
+                           IsPassword="True"
+                           Text="{Binding Password}"/>
+                    
+                    <Entry Placeholder="Confirm Password"
+                           PlaceholderColor="Gray"
+                           FontFamily="RobotoMonoVariableFont"
+                           IsPassword="True"
+                           Text="{Binding ConfirmPassword}"/>
+
+                    <Button Text="Iniciar"
+                            FontFamily="RobotoMonoVariableFont"
+                            BackgroundColor="#4B0082" 
+                            TextColor="White"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            CornerRadius="8"
+                            Margin="0, 15, 0, 0"
+                            HeightRequest="50"
+                            Command="{Binding IniciarSesionCommand}"/>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1"
+                             VerticalOptions="End"
+                             HorizontalOptions="Center"
+                             Margin="0, 0, 0, 40">
+            <HorizontalStackLayout Spacing="2">
+                <Button Text="No tienes una cuenta?"
+                       TextColor="Black"
+                       BackgroundColor="Transparent"
+                       FontSize="10" />
+                <Button Text="Registrate"
+                        TextColor="#4B0082"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"
+                        FontSize="10"
+                        Command="{Binding GoToRegisterPageCommand}"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

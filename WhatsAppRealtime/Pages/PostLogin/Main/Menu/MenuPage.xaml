@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+ 
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WhatsAppRealtime.Pages.PostLogin.Main.Menu.MenuPage"
+             xmlns:vm="clr-namespace:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu"
+             xmlns:chatView="clr-namespace:WhatsAppRealtime.Views.Chat"
+             xmlns:chatModel="clr-namespace:WhatsAppRealtime.Models.Chats"
+             x:DataType="vm:MenuPageViewModel"
+             x:Name="ChatMenuPage">
+    
+    <VerticalStackLayout Margin="10">
+        <Label Text="{Binding Email}"/>
+        <CollectionView ItemsSource="{Binding Chats}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="chatModel:Chat">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems Mode="Reveal">
+                                <SwipeItem Text="Eliminar"
+                                           IconImageSource="delete.png"
+                                           BackgroundColor="#ff1800"
+                                           Command="{Binding Source={x:Reference ChatMenuPage}, Path=BindingContext.DeleteChatCommand}"
+                                           CommandParameter="{Binding .}"/>
+                                
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <chatView:ChatView NombreChat="{Binding Id}">
+                            <chatView:ChatView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:Reference ChatMenuPage}, Path=BindingContext.IrChatCommand}"
+                                                      CommandParameter="{Binding .}"/>
+                            </chatView:ChatView.GestureRecognizers>
+                        </chatView:ChatView>
+                    </SwipeView>
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Add" Command="{Binding AddChatCommand}"/> 
+    </VerticalStackLayout>
+</ContentPage>

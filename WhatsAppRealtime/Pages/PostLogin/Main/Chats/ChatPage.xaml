@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:WhatsAppRealtime.Models.Messages"
+             xmlns:vm="clr-namespace:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats"
+             x:Class="WhatsAppRealtime.Pages.PostLogin.Main.Chats.ChatPage"
+             x:DataType="vm:ChatPageViewModel">
+    
+    <Grid RowDefinitions="*, Auto" Margin="10,20" RowSpacing="5">
+        <CollectionView Grid.Row="0" 
+                        ItemsSource="{Binding Mensajes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Message">
+                    <Border BackgroundColor="Violet">
+                        <Label Text="{Binding MensageStr}"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Grid Grid.Row="1" 
+              ColumnDefinitions="*, Auto" 
+              ColumnSpacing="5"
+              Margin="0,0,0,5">
+            <Border Grid.Column="0" 
+                    VerticalOptions="End"
+                    StrokeShape="10">
+                <Entry Placeholder="Texto" Text="{Binding TextoMensaje}"/>
+            </Border>
+            <Border Grid.Column="1" 
+                    HorizontalOptions="End" 
+                    Stroke="Transparent" 
+                    StrokeShape="25"
+                    BackgroundColor="Green" >
+                <ImageButton Source="send.png" 
+                             MaximumHeightRequest="20" 
+                             MaximumWidthRequest="45"
+                             Command="{Binding EnviarCommand}"/>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>

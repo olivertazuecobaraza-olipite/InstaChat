@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WhatsAppRealtime.Views.Chat.ChatView"
+             xmlns:postLogin="clr-namespace:WhatsAppRealtime.Views.Chat"
+             x:DataType="postLogin:ChatView"
+             x:Name="ContentViewChat">
+    <Border Margin="5" Padding="10" 
+            StrokeShape="10" 
+            Stroke="Transparent" 
+            BackgroundColor="#F0F0F0" 
+            BindingContext="{x:Reference ContentViewChat}">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{}"/>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding NombreChat}" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="Black"/>
+                <Label Text="{Binding LastMesage}" 
+                       TextColor="Gray" />
+                
+            </StackLayout>
+            
+            <Label Text="{Binding DateLastMessage}" 
+                   VerticalOptions="Center" 
+                   FontSize="12" />
+        </StackLayout>
+    </Border>
+</ContentView>
