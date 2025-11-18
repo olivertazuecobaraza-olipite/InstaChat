@@ -88,9 +88,3 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Views.Chat.ChatView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Chat\ChatView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Chat\ChatView.xaml
-
-[C:/Users/tazue/Documents/WhatsAppRealtime/WhatsAppRealtime/Views/Message/MessageView.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Views.Message.MessageView.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Message\MessageView.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Message\MessageView.xaml

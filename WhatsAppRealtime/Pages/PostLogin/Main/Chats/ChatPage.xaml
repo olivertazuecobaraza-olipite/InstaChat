@@ -6,7 +6,7 @@
              xmlns:vm="clr-namespace:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats"
              x:Class="WhatsAppRealtime.Pages.PostLogin.Main.Chats.ChatPage"
              x:DataType="vm:ChatPageViewModel"
-             BackgroundColor="#f8f8ff"
+             BackgroundColor="#ffebf2" 
              Shell.NavBarHasShadow="True"
              Title="{Binding ChatActual.NombreVisible}">
     
@@ -16,12 +16,13 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Message">
                     <VerticalStackLayout Margin="4,2">
-                        <Grid ColumnDefinitions="*, *">
+                        <Grid ColumnDefinitions="*, *, *">
                             <Border Stroke="Transparent"
                                     StrokeShape="10"
                                     Padding="10"
-                                    BackgroundColor="#3a0ca3"
+                                    BackgroundColor="#5e47df"
                                     Grid.Column="1"
+                                    Grid.ColumnSpan="2"
                                     >
                                 <Border.Shadow>
                                     <Shadow Opacity="0.2"

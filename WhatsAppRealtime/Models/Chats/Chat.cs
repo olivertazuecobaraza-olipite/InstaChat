@@ -29,7 +29,9 @@ public class Chat(string user1, string user2)
         }
     }
 
-    #endregion
+    public string LastMessage { get; set; } = string.Empty;
 
+    public DateTime HoraEnvio { get; set; }
+    #endregion
 
 }

@@ -1,118 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|c:\\users\\tazue\\documents\\whatsapprealtime\\whatsapprealtime\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|solutionrelative:whatsapprealtime\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|c:\\users\\tazue\\documents\\whatsapprealtime\\whatsapprealtime\\viewmodel\\postlogin\\main\\chats\\chatpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|solutionrelative:whatsapprealtime\\viewmodel\\postlogin\\main\\chats\\chatpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|c:\\users\\tazue\\documents\\whatsapprealtime\\whatsapprealtime\\models\\static\\utiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|solutionrelative:whatsapprealtime\\models\\static\\utiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|c:\\users\\tazue\\documents\\whatsapprealtime\\whatsapprealtime\\models\\chats\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|solutionrelative:whatsapprealtime\\models\\chats\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|c:\\users\\tazue\\documents\\whatsapprealtime\\whatsapprealtime\\viewmodel\\postlogin\\main\\menu\\menupageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|solutionrelative:whatsapprealtime\\viewmodel\\postlogin\\main\\menu\\menupageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|c:\\users\\tazue\\documents\\whatsapprealtime\\whatsapprealtime\\pages\\postlogin\\main\\menu\\menupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{05666BE4-97CF-4AE0-B025-11F8979785D2}|WhatsAppRealtime\\WhatsAppRealtime.csproj|solutionrelative:whatsapprealtime\\pages\\postlogin\\main\\menu\\menupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "WhatsAppRealtime\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\MauiProgram.cs",
-              "RelativeToolTip": "WhatsAppRealtime\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T09:28:25.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Chats\\ChatPageViewModel.cs",
-              "RelativeDocumentMoniker": "WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Chats\\ChatPageViewModel.cs",
-              "ToolTip": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Chats\\ChatPageViewModel.cs",
-              "RelativeToolTip": "WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Chats\\ChatPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:43:11.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Utiles.cs",
-              "DocumentMoniker": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\Models\\Static\\Utiles.cs",
-              "RelativeDocumentMoniker": "WhatsAppRealtime\\Models\\Static\\Utiles.cs",
-              "ToolTip": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\Models\\Static\\Utiles.cs",
-              "RelativeToolTip": "WhatsAppRealtime\\Models\\Static\\Utiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:42:42.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Menu\\MenuPageViewModel.cs",
-              "RelativeDocumentMoniker": "WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Menu\\MenuPageViewModel.cs",
-              "ToolTip": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Menu\\MenuPageViewModel.cs",
-              "RelativeToolTip": "WhatsAppRealtime\\ViewModel\\PostLogin\\Main\\Menu\\MenuPageViewModel.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAA8wGMAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:41:24.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Chat.cs",
-              "DocumentMoniker": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\Models\\Chats\\Chat.cs",
-              "RelativeDocumentMoniker": "WhatsAppRealtime\\Models\\Chats\\Chat.cs",
-              "ToolTip": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\Models\\Chats\\Chat.cs",
-              "RelativeToolTip": "WhatsAppRealtime\\Models\\Chats\\Chat.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA0wBsAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T18:39:50.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MenuPage.xaml",
-              "DocumentMoniker": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\Pages\\PostLogin\\Main\\Menu\\MenuPage.xaml",
-              "RelativeDocumentMoniker": "WhatsAppRealtime\\Pages\\PostLogin\\Main\\Menu\\MenuPage.xaml",
-              "ToolTip": "C:\\Users\\tazue\\Documents\\WhatsAppRealtime\\WhatsAppRealtime\\Pages\\PostLogin\\Main\\Menu\\MenuPage.xaml",
-              "RelativeToolTip": "WhatsAppRealtime\\Pages\\PostLogin\\Main\\Menu\\MenuPage.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-17T18:34:30.988Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

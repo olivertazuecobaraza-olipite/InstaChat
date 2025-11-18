@@ -73,8 +73,20 @@
                             CornerRadius="8"
                             Margin="0, 15, 0, 0"
                             HeightRequest="50"
-                            Command="{Binding IniciarSesionCommand}"/>
+                            Command="{Binding IniciarSesionCommand}">
+                        <Button.Shadow>
+                            <Shadow Brush="#000000"
+                                    Opacity="0.4"
+                                    Radius="4"
+                                  />        
+                        </Button.Shadow>
+                    </Button>
                 </VerticalStackLayout>
+                <Border.Shadow>
+                    <Shadow Brush="#000000"
+                            Opacity="0.3"
+                            Radius="3"/>
+                </Border.Shadow>
             </Border>
         </VerticalStackLayout>
 

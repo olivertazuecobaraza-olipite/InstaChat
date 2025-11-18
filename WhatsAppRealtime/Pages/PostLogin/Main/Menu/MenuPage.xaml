@@ -8,14 +8,15 @@
              xmlns:chatModel="clr-namespace:WhatsAppRealtime.Models.Chats"
              x:DataType="vm:MenuPageViewModel"
              x:Name="ChatMenuPage"
-             Shell.NavBarHasShadow="True">
+             Shell.NavBarHasShadow="True"
+             BackgroundColor="White">
     
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="add.png"
                      Command="{Binding AddChatCommand}"/>
     </ContentPage.ToolbarItems>
 
-    <VerticalStackLayout Margin="5">
+    <VerticalStackLayout Margin="0,5,0,0">
         <CollectionView ItemsSource="{Binding Chats}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="chatModel:Chat">
@@ -30,7 +31,9 @@
 
                             </SwipeItems>
                         </SwipeView.RightItems>
-                        <chatView:ChatView NombreChat="{Binding NombreVisible}">
+                        <chatView:ChatView NombreChat="{Binding NombreVisible}"
+                                           LastMesage="{Binding LastMessage}"
+                                           DateLastMessage="{Binding HoraEnvio}">
                             <chatView:ChatView.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Source={x:Reference ChatMenuPage}, Path=BindingContext.IrChatCommand}"
                                                       CommandParameter="{Binding .}"/>

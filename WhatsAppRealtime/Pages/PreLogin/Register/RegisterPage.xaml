@@ -9,72 +9,84 @@
              NavigationPage.HasNavigationBar="True">
     <ScrollView>
         <Grid RowDefinitions="Auto, *">
-        <BoxView Grid.Row="0"
-                 BackgroundColor="#4B0082" HeightRequest="300"
-                 VerticalOptions="Start" 
-                 CornerRadius="0,0,35,35"/>
+            <BoxView Grid.Row="0"
+                     BackgroundColor="#4B0082" HeightRequest="300"
+                     VerticalOptions="Start" 
+                     CornerRadius="0,0,35,35"/>
 
-        <VerticalStackLayout Grid.Row="0" Grid.RowSpan="2"
-                             Margin="0, 80, 0, 0"
-                             VerticalOptions="Start"
-                             HorizontalOptions="Fill">
-            
-            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="5" Margin="0, 0, 0, 30">
-                <StackLayout HorizontalOptions="Center">
-                    <Image Source="logowhite.png" HeightRequest="80" WidthRequest="80" Aspect="AspectFit" />
-                </StackLayout>
-                <Label Text="INSTA CHAT"
-                       TextColor="White"
-                       FontSize="24"
-                       HorizontalOptions="Center"
-                       FontFamily="RobotoMonoVariableFont"/>
-            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="0" Grid.RowSpan="2"
+                                 Margin="0, 80, 0, 0"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Fill">
 
-            <Border BackgroundColor="#edf2f4"
-                    StrokeShape="RoundRectangle 20"
-                    StrokeThickness="0"
-                    Padding="30"
-                    Margin="30, 0, 30, 0"
-                    VerticalOptions="Start">
-                
-                <VerticalStackLayout Spacing="15">
-                    <Label Text="REGISTRATE"
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Spacing="5" Margin="0, 0, 0, 30">
+                    <StackLayout HorizontalOptions="Center">
+                        <Image Source="logowhite.png" HeightRequest="80" WidthRequest="80" Aspect="AspectFit" />
+                    </StackLayout>
+                    <Label Text="INSTA CHAT"
+                           TextColor="White"
+                           FontSize="24"
                            HorizontalOptions="Center"
-                           FontSize="20"
-                           FontFamily="RobotoMonoVariableFont"
-                           FontAttributes="Bold"
-                           TextColor="Black" />
-
-                    <Entry Placeholder="Email"
-                           PlaceholderColor="Gray"
-                           FontFamily="RobotoMonoVariableFont"
-                           Keyboard="Email" 
-                           Text="{Binding Email}"/>
-
-                    <Entry Placeholder="Password"
-                           PlaceholderColor="Gray"
-                           FontFamily="RobotoMonoVariableFont"
-                           IsPassword="True"
-                           Text="{Binding Password}"/>
-                    
-                    <Entry Placeholder="Confirm Password"
-                           PlaceholderColor="Gray"
-                           IsPassword="True"
-                           Text="{Binding ConfirmPassword}"/>
-
-                    <Button Text="REGISTRAR"
-                            FontFamily="RobotoMonoVariableFont"
-                            BackgroundColor="#4B0082" 
-                            TextColor="White"
-                            FontSize="18"
-                            FontAttributes="Bold"
-                            CornerRadius="8"
-                            Margin="0, 15, 0, 0"
-                            HeightRequest="50"
-                            Command="{Binding RegistrarseCommand}"/>
+                           FontFamily="RobotoMonoVariableFont"/>
                 </VerticalStackLayout>
-            </Border>
-        </VerticalStackLayout>
+
+                <Border BackgroundColor="#edf2f4"
+                        StrokeShape="RoundRectangle 20"
+                        StrokeThickness="0"
+                        Padding="30"
+                        Margin="30, 0, 30, 0"
+                        VerticalOptions="Start">
+
+                    <VerticalStackLayout Spacing="15">
+                        <Label Text="REGISTRATE"
+                               HorizontalOptions="Center"
+                               FontSize="20"
+                               FontFamily="RobotoMonoVariableFont"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+
+                        <Entry Placeholder="Email"
+                               PlaceholderColor="Gray"
+                               FontFamily="RobotoMonoVariableFont"
+                               Keyboard="Email" 
+                               Text="{Binding Email}"/>
+
+                        <Entry Placeholder="Password"
+                               PlaceholderColor="Gray"
+                               FontFamily="RobotoMonoVariableFont"
+                               IsPassword="True"
+                               Text="{Binding Password}"/>
+
+                        <Entry Placeholder="Confirm Password"
+                               PlaceholderColor="Gray"
+                               IsPassword="True"
+                               Text="{Binding ConfirmPassword}"/>
+
+                        <Button Text="REGISTRAR"
+                                FontFamily="RobotoMonoVariableFont"
+                                BackgroundColor="#4B0082" 
+                                TextColor="White"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                CornerRadius="8"
+                                Margin="0, 15, 0, 0"
+                                HeightRequest="50"
+                                Command="{Binding RegistrarseCommand}">
+                            <Button.Shadow>
+                                <Shadow Brush="#000000"
+                                        Opacity="0.3"
+                                        Radius="3"
+                                        Offset="2,2"/>
+                            </Button.Shadow>
+                        </Button>
+                    </VerticalStackLayout>
+                    <Border.Shadow>
+                        <Shadow Brush="#000000"
+                                    Opacity="0.3"
+                                    Radius="3"/>
+                    </Border.Shadow>
+                </Border>
+            </VerticalStackLayout>
         </Grid>
     </ScrollView>
     

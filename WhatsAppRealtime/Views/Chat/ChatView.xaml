@@ -9,22 +9,39 @@
     <Border Margin="5" Padding="10" 
             StrokeShape="10" 
             Stroke="Transparent" 
-            BackgroundColor="#F0F0F0" 
+            BackgroundColor="#ffebf2" 
             BindingContext="{x:Reference ContentViewChat}">
-        <StackLayout Orientation="Horizontal" Spacing="5">
-            <Border StrokeShape="40" Stroke="Transparent" WidthRequest="50" HeightRequest="50">
-                <Image Source="icon.png" />
+
+        <Grid ColumnDefinitions="Auto, *, Auto" 
+              ColumnSpacing="7">
+            <Border Grid.Column="0"
+                    StrokeShape="40" 
+                    Stroke="Transparent" 
+                    HorizontalOptions="Start"
+                    WidthRequest="50" 
+                    HeightRequest="50">
+                <Image Source="profile.png"/>
             </Border>
-            <StackLayout HorizontalOptions="FillAndExpand">
+            <VerticalStackLayout HorizontalOptions="Start" 
+                                 Grid.Column="1" 
+                                 Spacing="15">
                 <Label Text="{Binding NombreChat}" 
-                       FontSize="14" 
+                       FontSize="16" 
                        FontAttributes="Bold" 
                        TextColor="Black"/>
                 <Label Text="{Binding LastMesage}" 
-                       TextColor="Gray" />
+                       TextColor="Gray" 
+                       FontSize="12"/>  
 
-            </StackLayout>
-        </StackLayout>
+            </VerticalStackLayout>
+            <Label Grid.Column="2" 
+                   Text="{Binding DateLastMessage}"
+                   TextColor="Gray"
+                   FontSize="12"
+                   VerticalOptions="End"
+                   HorizontalOptions="End"/>    
+        </Grid>
+        
         <Border.Shadow>
             <Shadow Brush="#000000"
                     Radius="4"

@@ -11,6 +11,7 @@ using Firebase.Database.Streaming;
 using WhatsAppRealtime.Models.Static;
 using WhatsAppRealtime.Pages.PostLogin.Main.Chats;
 using WhatsAppRealtime.Pages.PostLogin.Main.Menu;
+using WhatsAppRealtime.Models.Messages;
 
 namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Menu;
 
@@ -26,11 +27,11 @@ public partial class MenuPageViewModel : ObservableObject
     #region Obserevables
 
     [ObservableProperty] private ObservableCollection<Chat> _chats = new();
-    
+
     #endregion
-    
+
     #region Constructor
-    
+
     public MenuPageViewModel(FireBaseAuth fba, FireBaseRealTime fbr)
     {
         _fbr = fbr;
@@ -106,6 +107,14 @@ public partial class MenuPageViewModel : ObservableObject
                 {
                     Chats.Add(chat.Object);
                 }
+                else
+                {
+                    int index = Chats.IndexOf(existeChat);
+                    if (index != -1)
+                    {
+                        Chats[index] = chat.Object;
+                    }
+                }
             }
             else if (chat.EventType == FirebaseEventType.Delete)
             {
@@ -116,6 +125,6 @@ public partial class MenuPageViewModel : ObservableObject
             }
         });
     }
-    
+
     #endregion
 }

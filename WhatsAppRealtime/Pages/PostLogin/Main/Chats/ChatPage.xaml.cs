@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WhatsAppRealtime.ViewModel.PostLogin.Main.Chats;
+﻿using WhatsAppRealtime.ViewModel.PostLogin.Main.Chats;
 
 namespace WhatsAppRealtime.Pages.PostLogin.Main.Chats;
 

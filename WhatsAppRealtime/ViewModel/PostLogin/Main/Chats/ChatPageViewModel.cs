@@ -58,8 +58,15 @@ public partial class ChatPageViewModel : ObservableObject, IQueryAttributable
         }
         else
         {
-            if (await _fbr.AddMessage(nuvoMensaje))
+            
+            if (await _fbr.AddMessage(nuvoMensaje) && await _fbr.UpdateChatAsync(new Chat(ChatActual.User1, ChatActual.User2)
             {
+                Id = ChatActual.Id,
+                LastMessage = nuvoMensaje.MensageStr,
+                HoraEnvio = nuvoMensaje.HoraEnvio
+            }))
+            {
+
                 Utiles.CrearToast("Enviado");
                 TextoMensaje = string.Empty;
             }
@@ -87,6 +94,8 @@ public partial class ChatPageViewModel : ObservableObject, IQueryAttributable
             return ChatActual.User1;
         }
     }
+
+    
     #endregion
     
     #region parametro
