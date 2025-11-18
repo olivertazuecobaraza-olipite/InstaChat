@@ -11,11 +11,13 @@
             Stroke="Transparent" 
             BackgroundColor="#F0F0F0" 
             BindingContext="{x:Reference ContentViewChat}">
-        <StackLayout Orientation="Horizontal">
-            <Label Text="{}"/>
+        <StackLayout Orientation="Horizontal" Spacing="5">
+            <Border StrokeShape="40" Stroke="Transparent" WidthRequest="50" HeightRequest="50">
+                <Image Source="icon.png" />
+            </Border>
             <StackLayout HorizontalOptions="FillAndExpand">
                 <Label Text="{Binding NombreChat}" 
-                       FontSize="18" 
+                       FontSize="14" 
                        FontAttributes="Bold" 
                        TextColor="Black"/>
                 <Label Text="{Binding LastMesage}" 
@@ -23,5 +25,10 @@
 
             </StackLayout>
         </StackLayout>
+        <Border.Shadow>
+            <Shadow Brush="#000000"
+                    Radius="4"
+                    Opacity="0.4"/>
+        </Border.Shadow>
     </Border>
 </ContentView>

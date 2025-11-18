@@ -1,41 +1,51 @@
-﻿using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
 using WhatsAppRealtime.Models.Chats;
 using WhatsAppRealtime.Models.Static;
 using WhatsAppRealtime.Services.Firebase;
 
-namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Menu
+namespace WhatsAppRealtime.ViewModel.PostLogin.Main.Menu;
+
+public partial class AddChatPageViewModel(FireBaseRealTime fbr, FireBaseAuth fba) : ObservableObject
 {
-    public partial class AddChatPageViewModel(FireBaseAuth fba, FireBaseRealTime fbr) : ObservableObject
+    #region Observables
+
+    [ObservableProperty] private string _email = string.Empty;
+
+    #endregion
+    
+    #region Servicios
+
+    private readonly FireBaseRealTime _fbr = fbr;
+    private readonly FireBaseAuth _fba = fba;
+
+    #endregion
+
+    #region Commands
+
+    [RelayCommand]
+    private async Task AddChat()
     {
-
-        #region Observables
-
-        [ObservableProperty] private string _emailReciver = string.Empty;
-
-        #endregion
-
-
-        #region Commands
-
-        [RelayCommand]
-        private async Task AddChat()
+        if (Email.Equals(string.Empty))
         {
-            var chatNuevo = new Chat(fba.ObtenerEmail(), EmailReciver);
-            if (await fbr.CrearChat(chatNuevo))
-            {
-                Utiles.CrearToast("Chat Creado correctamente");
-                await Shell.Current.Navigation.PopAsync();
-            }
-            else
-            {
-                await Utiles.AlertasMalasShell("Error al crear el Chat");
-                EmailReciver = string.Empty;
-            }
+            await Utiles.AlertasMalasShell("Campo vacio");
+            return;
         }
-
-        #endregion  
+        
+        var chatNuevo = new Chat(_fba.ObtenerEmail(), Email);
+        if (await _fbr.CrearChat(chatNuevo))
+        {
+            Email = string.Empty;
+            Utiles.CrearToast("Chat Creado");
+            await Shell.Current.Navigation.PopAsync();
+        }
+        else
+        {
+            await Utiles.AlertasMalasShell("Error al crear el chat");
+            Email = string.Empty;
+        }
     }
+    
+    #endregion
+
 }
