@@ -114,7 +114,7 @@ public partial class ChatPageViewModel : ObservableObject, IQueryAttributable
             if (message.Object == null) return;
             
             message.Object.Id = message.Key;
-            message.Object.IsMe = _fba.ObtenerEmail().Equals(message.Object.EmailSender); // poner isme
+            
 
             if (message.Object.IdChat != ChatActual?.Id) return;
             
@@ -124,6 +124,7 @@ public partial class ChatPageViewModel : ObservableObject, IQueryAttributable
             {
                 if (existeMessage == null) // insertar
                 { 
+                    message.Object.IsMe = _fba.ObtenerEmail().Equals(message.Object.EmailSender);
                     Mensajes.Add(message.Object);
                 }
             }

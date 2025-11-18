@@ -20,7 +20,7 @@ public partial class MenuPageViewModel : ObservableObject
 
     private readonly FireBaseRealTime _fbr;
     private readonly FireBaseAuth _fba;
-    //private readonly IPopupService _popupService;
+    
     #endregion
     
     #region Obserevables
@@ -92,7 +92,7 @@ public partial class MenuPageViewModel : ObservableObject
             if (chat.Object == null) return;
             chat.Object.Id = chat.Key;
 
-            if (!chat.Object.User1.Equals(_fba.ObtenerEmail()) && !chat.Object.User2.Equals(_fba.ObtenerEmail()))
+            if (!chat.Object.User1.Equals(_fba.ObtenerEmail().ToLower()) && !chat.Object.User2.Equals(_fba.ObtenerEmail().ToLower()))
             {
                 return;
             }

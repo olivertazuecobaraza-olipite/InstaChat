@@ -5,7 +5,10 @@
              xmlns:model="clr-namespace:WhatsAppRealtime.Models.Messages"
              xmlns:vm="clr-namespace:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats"
              x:Class="WhatsAppRealtime.Pages.PostLogin.Main.Chats.ChatPage"
-             x:DataType="vm:ChatPageViewModel">
+             x:DataType="vm:ChatPageViewModel"
+             BackgroundColor="#f8f8ff"
+             Shell.NavBarHasShadow="True"
+             Title="{Binding ChatActual.NombreVisible}">
     
     <Grid RowDefinitions="*, Auto" Margin="10,20" RowSpacing="5">
         <CollectionView Grid.Row="0" 

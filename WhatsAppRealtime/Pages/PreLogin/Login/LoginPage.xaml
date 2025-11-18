@@ -47,19 +47,21 @@
                     <Entry Placeholder="Email"
                            PlaceholderColor="Gray"
                            FontFamily="RobotoMonoVariableFont"
-                           Keyboard="Email" 
+                           TextColor="Black"
                            Text="{Binding Email}"/>
 
                     <Entry Placeholder="Password"
                            PlaceholderColor="Gray"
                            FontFamily="RobotoMonoVariableFont"
                            IsPassword="True"
+                           TextColor="Black"
                            Text="{Binding Password}"/>
                     
                     <Entry Placeholder="Confirm Password"
                            PlaceholderColor="Gray"
                            FontFamily="RobotoMonoVariableFont"
                            IsPassword="True"
+                           TextColor="Black"
                            Text="{Binding ConfirmPassword}"/>
 
                     <Button Text="Iniciar"

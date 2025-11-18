@@ -7,14 +7,15 @@
              xmlns:chatView="clr-namespace:WhatsAppRealtime.Views.Chat"
              xmlns:chatModel="clr-namespace:WhatsAppRealtime.Models.Chats"
              x:DataType="vm:MenuPageViewModel"
-             x:Name="ChatMenuPage">
+             x:Name="ChatMenuPage"
+             Shell.NavBarHasShadow="True">
     
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="add.png"
                      Command="{Binding AddChatCommand}"/>
     </ContentPage.ToolbarItems>
 
-    <VerticalStackLayout Margin="10">
+    <VerticalStackLayout Margin="5">
         <CollectionView ItemsSource="{Binding Chats}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="chatModel:Chat">
