@@ -73,7 +73,7 @@ public static class MauiProgram
     private static void StartServices(this IServiceCollection service)
     {
         // Firebase
-        service.AddScoped<FireBaseAuth>();
+        service.AddTransient<FireBaseAuth>();
         service.AddScoped<FireBaseRealTime>();
     }
 

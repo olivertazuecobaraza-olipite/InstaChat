@@ -37,11 +37,12 @@ public class FireBaseRealTime()
     
     
     // delete chat
-    public async Task<bool> DeleteChat(Chat? chat)
+    public async Task<bool> DeleteChat(Chat chat)
     {
         var r = false;
         try
         {
+            
             await Instance.Child("chat").Child(chat.Id).DeleteAsync();
             r = true;
         }

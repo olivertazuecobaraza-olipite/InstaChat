@@ -21,6 +21,20 @@ public class Utiles
         return username.Split("@")[0].Replace(".", "");
     }
 
+    
+    // comprobar que se ha introducido valores y que las contraseñas coinciden
+    public static bool TestPassword(string email,string password, string confirmPassword)
+    {
+        var r = false;
+        if (!string.IsNullOrEmpty(email) || !string.IsNullOrEmpty(password) || !string.IsNullOrWhiteSpace(confirmPassword))
+        {
+            if (password.Equals(confirmPassword))
+            {
+                r = true;
+            }
+        }
+        return r;
+    }
     #endregion
     
     #region AlertasShell
@@ -67,18 +81,6 @@ public class Utiles
         return await Application.Current!.Windows[0].Page!.DisplayAlert("Elige", mensaje, "Si", "No");
     }
 
-    // comprobar que se ha introducido valores y que las contraseñas coinciden
-    public static bool TestPassword(string email,string password, string confirmPassword)
-    {
-        var r = false;
-        if (!string.IsNullOrEmpty(email) || !string.IsNullOrEmpty(password) || !string.IsNullOrWhiteSpace(confirmPassword))
-        {
-            if (password.Equals(confirmPassword))
-            {
-                r = true;
-            }
-        }
-        return r;
-    }
+    
     #endregion
 }

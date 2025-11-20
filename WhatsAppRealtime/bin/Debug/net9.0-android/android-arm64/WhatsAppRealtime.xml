@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WhatsAppRealtime</name>
+    </assembly>
+    <members>
+        <member name="T:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.ChatActual">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel._chatActual"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.Mensajes">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel._mensajes"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.TextoMensaje">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel._textoMensaje"/>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.enviarCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.EnviarCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.EnviarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PostLogin.Main.Chats.ChatPageViewModel.Enviar"/>.</summary>
+        </member>
+        <member name="T:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel.Email">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel._email"/>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel.addChatCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel.AddChatCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel.AddChatCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.AddChatPageViewModel.AddChat"/>.</summary>
+        </member>
+        <member name="T:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.Chats">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel._chats"/>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.addChatCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.AddChatCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.AddChatCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.AddChat"/>.</summary>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.deleteChatCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.DeleteChatCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.DeleteChatCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.DeleteChat(WhatsAppRealtime.Models.Chats.Chat)"/>.</summary>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.irChatCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.IrChatCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.IrChatCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PostLogin.Main.Menu.MenuPageViewModel.IrChat(WhatsAppRealtime.Models.Chats.Chat)"/>.</summary>
+        </member>
+        <member name="T:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.cerrarSesionCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.CerrarSesionCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.CerrarSesionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.CerrarSesion"/>.</summary>
+        </member>
+        <member name="T:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.Email">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel._email"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.Password">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel._password"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.ConfirmPassword">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel._confirmPassword"/>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.goToRegisterPageCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.GoToRegisterPageCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.GoToRegisterPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.GoToRegisterPage"/>.</summary>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.iniciarSesionCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.IniciarSesionCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.IniciarSesionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PreLogin.Login.LoginPageViewModel.IniciarSesion"/>.</summary>
+        </member>
+        <member name="T:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.Email">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel._email"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.Password">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel._password"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.ConfirmPassword">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel._confirmPassword"/>
+        </member>
+        <member name="F:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.registrarseCommand">
+            <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.RegistrarseCommand"/>.</summary>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.RegistrarseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WhatsAppRealtime.ViewModel.PreLogin.Register.RegisterPageViewModel.Registrarse"/>.</summary>
+        </member>
+        <member name="T:WhatsAppRealtime.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChatActual">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChatActual" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Mensajes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Mensajes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TextoMensaje">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TextoMensaje" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Chats">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Chats" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChatActual">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChatActual" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Mensajes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Mensajes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TextoMensaje">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TextoMensaje" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Chats">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Chats" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+    </members>
+</doc>
