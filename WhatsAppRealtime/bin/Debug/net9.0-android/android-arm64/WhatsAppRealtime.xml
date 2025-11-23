@@ -65,6 +65,13 @@
         </member>
         <member name="T:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel">
             <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.SourceImage">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel._sourceImage"/>
+        </member>
+        <member name="P:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.Email">
+            <inheritdoc cref="F:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel._email"/>
         </member>
         <member name="F:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.cerrarSesionCommand">
             <summary>The backing field for <see cref="P:WhatsAppRealtime.ViewModel.PostLogin.Profile.ProfilePageViewModel.CerrarSesionCommand"/>.</summary>
@@ -264,6 +271,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Chats">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Chats" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SourceImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SourceImage" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
         </member>
@@ -290,6 +300,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Chats">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Chats" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SourceImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SourceImage" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>

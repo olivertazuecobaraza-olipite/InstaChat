@@ -7,13 +7,30 @@ using WhatsAppRealtime.ViewModel.PreLogin.Login;
 
 namespace WhatsAppRealtime.ViewModel.PostLogin.Profile;
 
-public partial class ProfilePageViewModel(FireBaseAuth fba) : ObservableObject
+public partial class ProfilePageViewModel : ObservableObject
 {
     #region Services
 
-    private readonly FireBaseAuth _fba = fba;
+    private readonly FireBaseAuth _fba;
 
     #endregion
+    
+    #region Observables
+
+    [ObservableProperty] private string _sourceImage = "profile.png";
+    [ObservableProperty] private string _email;
+    #endregion
+
+    #region Construcor
+
+    public ProfilePageViewModel(FireBaseAuth fba)
+    {
+        _fba = fba;
+        Email = _fba.ObtenerEmail();
+    }
+
+    #endregion
+    
     
     #region Commands
 

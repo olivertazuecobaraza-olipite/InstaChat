@@ -4,6 +4,7 @@ using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Firebase.Database.Query;
 using WhatsAppRealtime.Models.Chats;
 using WhatsAppRealtime.Services.Firebase;
 
@@ -56,12 +57,12 @@ public partial class MenuPageViewModel : ObservableObject
     [RelayCommand]
     private async Task DeleteChat(Chat chat)
     {
+        
         var respuesta = await Utiles.AlertaPreguntaShell("Estas seguro que quieres eliminar el chat?");
         if (respuesta)
         {
             if (await _fbr.DeleteChat(chat))
             {
-                
                 Utiles.CrearToast("Chat eliminado");
             }
             else

@@ -17,9 +17,9 @@ public partial class LoginPageViewModel(FireBaseAuth fba) : ObservableObject
     
     #region Observable Properties
 
-    [ObservableProperty] private string _email = "oliver.tazueco.baraza@iestubalcain.net";
-    [ObservableProperty] private string _password = "damdam";
-    [ObservableProperty] private string _confirmPassword = "damdam";
+    [ObservableProperty] private string _email = string.Empty;
+    [ObservableProperty] private string _password = string.Empty;
+    [ObservableProperty] private string _confirmPassword = string.Empty;
 
     #endregion
 

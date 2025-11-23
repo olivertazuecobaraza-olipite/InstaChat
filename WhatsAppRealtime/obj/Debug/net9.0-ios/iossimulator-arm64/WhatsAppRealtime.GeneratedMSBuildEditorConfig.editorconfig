@@ -90,3 +90,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Views.Chat.ChatView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/Chat/ChatView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/Chat/ChatView.xaml
+
+[/Users/olipie/Documents/DAM2/DI/InstaChat/WhatsAppRealtime/Views/Profile/ProfileView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = WhatsAppRealtime.Views.Profile.ProfileView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/Profile/ProfileView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/Profile/ProfileView.xaml

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WhatsAppRealtime")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0c26829d8ebe490d1cc878e0e645346eea1ebb03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+23223c0291285a683796b9c482db9527682628cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("WhatsAppRealtime")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WhatsAppRealtime")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
