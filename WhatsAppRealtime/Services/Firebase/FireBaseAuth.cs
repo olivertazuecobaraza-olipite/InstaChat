@@ -9,8 +9,8 @@ public class FireBaseAuth
     
     public FirebaseAuthClient Instance = new FirebaseAuthClient(new FirebaseAuthConfig
         {
-            ApiKey = "AIzaSyCieV0jgiuAdEgGg757M5RrDX5BCaH6Npw",
-            AuthDomain = "whatsappmauioliver.firebaseapp.com",
+            ApiKey = "",
+            AuthDomain = "",
             Providers = new FirebaseAuthProvider[]
             {
                 new EmailProvider()
