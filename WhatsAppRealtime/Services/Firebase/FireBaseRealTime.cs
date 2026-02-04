@@ -9,7 +9,7 @@ public class FireBaseRealTime()
 {
     #region Instancia
 
-    public readonly FirebaseClient Instance = new("https://whatsappmauioliver-default-rtdb.europe-west1.firebasedatabase.app/");
+    public readonly FirebaseClient Instance = new("");
 
     #endregion
     
